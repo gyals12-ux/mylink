@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <title>마이링크 (MyLink) - 나만의 SNS 링크 모음</title>
+  <meta name="description" content="나만의 SNS와 프로필 링크를 한눈에 볼 수 있는 개인 링크트리 웹사이트" />
+  <meta name="theme-color" content="#6366f1" />
+
+  <!-- Open Graph / SNS 공유 미리보기 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="마이링크 (MyLink) - 개인 SNS 프로필" />
+  <meta property="og:description" content="나만의 모든 링크를 한곳에서 편리하게 확인하세요." />
+  <meta property="og:image" content="./avatar.svg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <!-- 다크 모드 깜빡임(FOUC) 방지 인라인 스크립트 -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('mylink-theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- 메인 스타일시트 -->
+  <script type="module" crossorigin src="/mylink/assets/index-TF5cm_NK.js"></script>
+  <link rel="stylesheet" crossorigin href="/mylink/assets/index-CtmlGbd1.css">
+</head>
+<body>
+  <!-- 배경 오로라 이펙트 -->
+  <div class="aurora-bg"></div>
+
+  <!-- 전체 레이아웃 컨테이너 -->
+  <div class="app-container">
+    <!-- 상단 퀵 유틸리티 바 (주소 복사 & 다크모드 토글) -->
+    <header class="header-actions">
+      <button id="copy-header-btn" class="icon-btn" aria-label="현재 마이링크 주소 복사" title="주소 복사">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <span>주소 복사</span>
+      </button>
+
+      <button id="theme-toggle-btn" class="icon-btn theme-toggle-btn" aria-label="다크 모드 전환" title="테마 전환">
+        <!-- JS로 동적 아이콘(Sun/Moon) 삽입 -->
+      </button>
+    </header>
+
+    <!-- 중앙 메인 프로필 카드 -->
+    <main class="main-card">
+      <!-- 1. 원형 프로필 이미지 영역 -->
+      <div class="profile-avatar-wrapper">
+        <div class="avatar-ring"></div>
+        <img id="profile-avatar" class="profile-avatar" src="./avatar.svg" alt="프로필 아바타" width="110" height="110" />
+      </div>
+
+      <!-- 2. 프로필 이름 및 자기소개 -->
+      <h1 id="profile-name" class="profile-name">마이링크 (MyLink)</h1>
+      <p id="profile-bio" class="profile-bio">
+        반갑습니다! 저의 다양한 활동과 SNS 링크를 한곳에서 확인해보세요. ✨
+      </p>
+
+      <!-- 3. SNS 링크 버튼 리스트 (Instagram, YouTube, GitHub, Email) -->
+      <div id="links-container" class="links-container">
+        <!-- JS로 동적 렌더링 -->
+      </div>
+
+      <!-- 4. 내 마이링크 주소 공유/복사 액션 버튼 -->
+      <div class="share-action-card">
+        <button id="copy-footer-btn" class="share-btn" type="button">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+            <polyline points="16 6 12 2 8 6"></polyline>
+            <line x1="12" y1="2" x2="12" y2="15"></line>
+          </svg>
+          <span>내 마이링크 주소 복사하기</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- 사이트 푸터 -->
+    <footer class="site-footer">
+      <p id="footer-text">© 2026 MyLink. Built with HTML, CSS, JavaScript & Vite.</p>
+      <p id="footer-madewith" class="footer-highlight">Made for University Project 🎓</p>
+    </footer>
+  </div>
+
+  <!-- 토스트 알림 팝업 -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span class="toast-icon">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </span>
+    <span id="toast-msg">주소가 복사되었습니다!</span>
+  </div>
+
+  <!-- 메인 모듈 스크립트 -->
+</body>
+</html>
