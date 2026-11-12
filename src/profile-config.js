@@ -36,10 +36,10 @@ export const profileConfig = {
     {
       id: "instagram",
       title: "Instagram",
-      subtitle: "인스타그램",
+      subtitle: "@hyomin912",
       description: "일상 사진과 스토리 둘러보기",
       // 실제 인스타그램 주소를 입력하세요. (비워두면 숨김 처리됨)
-      url: "",
+      url: "https://www.instagram.com/hyomin912",
       color: "#E1306C",
       badge: "Photo",
     },
@@ -69,7 +69,7 @@ export const profileConfig = {
       subtitle: "이메일 보내기",
       description: "협업 제안 및 문의 메일 보내기",
       // 실제 이메일 주소를 입력하세요. (비워두면 숨김 처리됨)
-      url: "",
+      url: "gyals12@hanyang.ac.kr",
       color: "#0284c7",
       badge: "Contact",
     },

@@ -103,6 +103,20 @@ function formatUrl(rawUrl, type) {
   return trimmed;
 }
 
+function getIconForLink(link) {
+  const key = (link.type || link.id || '').toLowerCase();
+  const title = (link.title || '').toLowerCase();
+  const url = (link.url || '').toLowerCase();
+
+  if (icons[key]) return icons[key];
+  if (title.includes('instagram') || url.includes('instagram.com')) return icons.instagram;
+  if (title.includes('youtube') || url.includes('youtube.com') || url.includes('youtu.be')) return icons.youtube;
+  if (title.includes('github') || url.includes('github.com')) return icons.github;
+  if (title.includes('email') || title.includes('mail') || url.includes('@') || url.startsWith('mailto:')) return icons.email;
+
+  return icons.link;
+}
+
 /**
  * 4. 링크 카드 버튼 렌더링
  * - 요구사항: "링크 주소가 입력되지 않은 버튼은 비활성화하거나 숨겨 줘."
@@ -145,8 +159,8 @@ function renderLinks() {
       card.setAttribute('title', '링크 주소가 아직 등록되지 않았습니다.');
     }
 
-    // 아이콘 매핑
-    const iconSvg = icons[link.id] || icons[link.type] || icons.link;
+    // 스마트 아이콘 매핑
+    const iconSvg = getIconForLink(link);
 
     card.innerHTML = `
       <div class="link-icon-box" style="--card-accent: ${link.color || '#6366f1'}">
