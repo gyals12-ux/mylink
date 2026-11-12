@@ -7,8 +7,8 @@
 
 ## 📌 1. 프로젝트 목표 & 과제 제출 정보
 - **프로젝트 명**: 마이링크 (MyLink)
-- **GitHub 저장소**: `https://github.com/사용자이름/mylink`
-- **배포 주소 (GitHub Pages)**: `https://사용자이름.github.io/mylink/`
+- **GitHub 저장소**: `https://github.com/gyals12-ux/mylink`
+- **배포 주소 (GitHub Pages)**: `https://gyals12-ux.github.io/mylink/`
 
 ---
 

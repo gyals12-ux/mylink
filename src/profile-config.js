@@ -56,10 +56,10 @@ export const profileConfig = {
     {
       id: "github",
       title: "GitHub",
-      subtitle: "깃허브 저장소",
+      subtitle: "github.com/gyals12-ux",
       description: "소스코드 및 개발 프로젝트",
-      // 실제 깃허브 프로필 주소를 입력하세요. (비워두면 숨김 처리됨)
-      url: "",
+      // 실제 깃허브 프로필 주소
+      url: "https://github.com/gyals12-ux",
       color: "#24292e",
       badge: "Dev",
     },
