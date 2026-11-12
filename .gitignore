@@ -1,8 +1,12 @@
 # dependencies
 /node_modules
+/MyLink/node_modules
+**/node_modules
 
 # build output
 /dist
+/MyLink/dist
+**/dist
 /.next
 /out
 /build
