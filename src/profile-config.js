@@ -19,7 +19,7 @@
 
 export const profileConfig = {
   // 프로필 기본 정보
-  name: "MyLink",
+  name: "김효민의 MyLink",
   bio: "반갑습니다! 저의 다양한 활동과 SNS 링크를 한곳에서 확인해보세요. ✨",
   
   // 프로필 사진 경로
