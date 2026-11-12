@@ -6,7 +6,7 @@
     "dev": "npm --prefix MyLink run dev",
     "build": "npm --prefix MyLink run build",
     "preview": "npm --prefix MyLink run preview",
-    "deploy": "gh-pages -d MyLink/dist"
+    "deploy": "npm --prefix MyLink run deploy"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0"
