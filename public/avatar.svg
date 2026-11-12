@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#f1f5f9" stop-opacity="0.85" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#4f46e5" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- 원형 배경 -->
+  <circle cx="100" cy="100" r="100" fill="url(#bgGrad)" />
+
+  <!-- 모던 프로필 실루엣 -->
+  <g filter="url(#shadow)">
+    <!-- 머리 -->
+    <circle cx="100" cy="78" r="34" fill="url(#avatarGrad)" />
+    <!-- 어깨 & 상체 -->
+    <path d="M42 165 C42 125, 70 120, 100 120 C130 120, 158 125, 158 165 C158 175, 150 182, 140 182 L60 182 C50 182, 42 175, 42 165 Z" fill="url(#avatarGrad)" />
+  </g>
+
+  <!-- 미니멀 반짝임 악센트 -->
+  <circle cx="150" cy="45" r="4" fill="#ffffff" opacity="0.8" />
+  <circle cx="160" cy="58" r="2.5" fill="#ffffff" opacity="0.6" />
+</svg>
